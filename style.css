@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
@@ -52,4 +52,168 @@ body {
   
   button:hover {
     background: #0056b3;
-  }
+  } */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: Agrandir;
+    src: url('fonts/PPAgrandir-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: AgrandirNL;
+    src: url('fonts/PPAgrandir-li.otf') format("opentype");
+}
+@font-face {
+    font-family: AgrandirB;
+    src: url('fonts/PPAGrandir-Text-Bold.ttf') format("opentype");
+}
+@font-face {
+    font-family: Garet;
+    src: url('fonts/Garet-Book.ttf') format("truetype");
+}
+@font-face {
+    font-family: OpenSauceSB;
+    src: url('fonts/OpenSauceSB.ttf') format("truetype");
+}
+@font-face {
+    font-family: OSL;
+    src: url('fonts/OSL.ttf') format("truetype");
+}
+* {
+    /* font-family: "OSL", sans-serif; */
+    font-family: "OpenSauceSB", sans-serif;
+    font-weight: 900
+}
+
+.ordnum{
+    font-size:24px;
+    
+}
+.section{
+    font-size: 20px;
+}
+label{
+    font-size: 17px;
+}
+.logo{
+    margin-top:10px;
+    width:140px;
+    display: inline-block;
+}
+.securecheckout{
+    font-size: 35px;
+    display: inline-block;
+    margin-left:20px;
+    transform: translateY(-55px);
+}
+.mainside{
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    width:68vw;
+    height:125vh;
+    padding-left:5%
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.complete{
+    border: 0;
+    font-size: 19px;
+    background-color: #0D92F4;
+    color: white;
+    border-radius: 20px;
+    /* padding: 20px 6.15vw; */
+    width:17.5vw;
+    height:55px;
+    transition: .2s;
+    cursor: pointer;
+    font-family: "OSL";
+    
+}
+.complete:hover{
+    transform: scale(1.05);
+    transition: .2s;
+    background-color: #38a6f4;
+}
+.complete:focus{
+    transform: scale(.9);
+    transition: .4s;
+}
+input{
+    border: 1px rgb(78, 78, 78) solid;
+    /* background-color: #e9ecef; */
+    background-color: #fff;
+    height:55px;
+    font-size:17px;
+    border-radius: 20px;
+    transition: .2s;
+    text-indent: 20px;
+    width:17.25vw;
+}
+input:hover{
+    transform: scale(1.05);
+    transition: .2s;
+    
+}
+input:focus{
+    transform: scale(1.05);
+    transition: .2s;
+    
+}
+
+
+
+.shoption.selected{
+    border: 2px solid rgb(32, 115, 216);
+}
+.option {
+    background-color: #ffffff;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Push content to the sides */
+    align-items: center; /* Center content vertically */
+    border-radius: 30px;
+    border: 1px solid rgb(78, 78, 78);
+    padding: 10px 10px; /* Add padding for spacing */
+    width: 17vw;
+    cursor: pointer;
+
+}
+.shoption>*{
+    font-family: "OSL";
+}
+
+.optionmain{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.optionsecondary {
+    font-size: 16px;
+    font-family: "OSL";
+    margin-top: 0;
+}
+
+.optionright {
+    font-family: "OSL";
+    font-weight: bold; /* Optional: Make it bold */
+    text-align: right; /* Ensure it's aligned to the right */
+    margin-left: auto; /* Push it to the far right */
+}
+
+.paoption.selected{
+    border: 2px solid rgb(32, 115, 216);
+}
+
+.order-review{
+    font-size: 20px;
+    font-family: "OSL";
+}
+
+.ordr{
+    font-size: 28px;
+}

@@ -3,28 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout Page</title>
+  <title>Alor Checkout</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="alorlogo.png" type="image/x-icon">
 </head>
 <body>
-  <div class="checkout-container">
-    <h1>Checkout</h1>
-    <form id="checkout-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="John Doe" required>
+    <div class="center">
+    <div class="mainside"><div class="checkout-container">
+    <img src="alorlogo.png" class="logo">
+    <h1 class="securecheckout">Secure Checkout</h1>
+    <form id="checkout-form"><button type="submit" class="complete" id="complete">Complete Purchase</button><br><br>
+      <label class="ordnum">Order #A923484912000</label><br><br>
+      <label class="section">Shipping Information</label><br><br>
+      <!-- <div class="step1" id="step1"> -->
+      <input type="text" id="name" name="name" placeholder="Full Name" required class="input"><br><br>
       
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
       
-      <label for="address">Address</label>
-      <textarea id="address" name="address" placeholder="123 Main St, City, Country" required></textarea>
+      <input type="email" id="email" name="email" placeholder="Email Address" required class="input"><br><br>
       
-      <label for="card">Card Number</label>
-      <input type="text" id="card" name="card" placeholder="4111 1111 1111 1111" required>
       
-      <button type="submit">Submit</button>
+      <input id="address" name="address" placeholder="Address" required class="input"></input><br><br>
+      
+      
+      <input id="addressline2" name="addressline2" placeholder="Apt Suite Building (Optional)" class="input"></input><br><br>
+      <label class="section">Shipping Options</label><br><br>
+
+      <div class="option shoption selected" id="shipopt1">
+        <div class="optionleft">
+          <p class="optionmain">Delivers Tomorrow</p>
+        <p class="optionsecondary">1Day Delivery | Via AlorDelivery</p>
+        </div>
+        <p class="optionright">FREE</p>
+      </div><br>
+
+      <div class="option shoption " id="shipopt2">
+        <div class="optionleft">
+          <p class="optionmain">Delivers Tomorrow</p>
+        <p class="optionsecondary">1Day Delivery | Via SealDelivery</p>
+        </div>
+        <p class="optionright">FREE</p>
+      </div><br>
+      <label class="section">Payment Options</label><br><br>
+
+      <div class="option paoption selected" id="shipopt1">
+        <div class="optionleft">
+          <p class="optionmain">Pay When Received</p>
+        <p class="optionsecondary">Pay when you get the package</p>
+        </div>
+        <p class="optionright"></p>
+      </div><br>
+      <label class="section ordr" >Order Review</label><br> 
+    <div id="order-review" class="order-review">
+      <!-- Dynamic content will be inserted here -->
+    </div><br>
+      <!-- <button class="complete" onclick="step1t2()" >Next</button> -->
+      <!-- </div> -->
+      <!-- <input type="text" id="card" name="card" placeholder="" required class="input"><br><br> -->
+      
+      <button type="submit" class="complete" id="complete">Complete Purchase</button>
     </form>
-  </div>
+
+  </div></div></div>
+  
   <script src="script.js"></script>
 </body>
 </html>
