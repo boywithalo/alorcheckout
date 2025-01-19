@@ -86,7 +86,7 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
     const emailInput = document.getElementById("email");
     const addressInput = document.getElementById("address");
     const addressLine2Input = document.getElementById("addressline2");
-  
+    const ordernumber = document.getElementById("ordnum");
     // Options
     const shippingOptions = document.querySelectorAll(".shoption");
     const paymentOptions = document.querySelectorAll(".paoption");
@@ -121,6 +121,7 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
       const selectedPayment = document.querySelector(".paoption.selected .optionmain");
   
       orderReview.innerHTML = `
+        <p>${ordernumber.textContent}</p>
         <p>Full Name: ${nameInput.value || ""}</p>
         <p>E-Mail: ${emailInput.value || ""}</p>
         <p>Address: ${addressInput.value || ""}</p>
@@ -134,3 +135,14 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
     // Initialize order review on page load
     updateOrderReview();
   });
+
+
+
+function generateRandom12DigitNumber() {
+  const randomNum = Math.floor(Math.random() * 9_000_000_000_000) + 1_000_000_000_000; 
+  return randomNum;
+}
+
+// Insert the random number into .ordnum
+const randomNumber = generateRandom12DigitNumber();
+document.querySelector('.ordnum').textContent += randomNumber;

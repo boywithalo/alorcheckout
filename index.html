@@ -8,12 +8,16 @@
   <link rel="shortcut icon" href="alorlogo.png" type="image/x-icon">
 </head>
 <body>
+  <div class="warning400pxmin">
+    <h1>Warning: Contents may not be displayed properly</h1>
+  </div>
     <div class="center">
     <div class="mainside"><div class="checkout-container">
+      <div class="logonsc">
     <img src="alorlogo.png" class="logo">
-    <h1 class="securecheckout">Secure Checkout</h1>
+    <h1 class="securecheckout">Secure Checkout</h1></div>
     <form id="checkout-form"><button type="submit" class="complete" id="complete">Complete Purchase</button><br><br>
-      <label class="ordnum">Order #A923484912000</label><br><br>
+      <label class="ordnum" id="ordnum">Order #A</label><br><br>
       <label class="section">Shipping Information</label><br><br>
       <!-- <div class="step1" id="step1"> -->
       <input type="text" id="name" name="name" placeholder="Full Name" required class="input"><br><br>
