@@ -146,3 +146,5 @@ function generateRandom12DigitNumber() {
 // Insert the random number into .ordnum
 const randomNumber = generateRandom12DigitNumber();
 document.querySelector('.ordnum').textContent += randomNumber;
+
+
