@@ -132,8 +132,8 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
         <p>Contact Info:</p>
         <p>E-Mail: ${emailInput.value || ""}</p>
         <p>Phone: ${phone.value || ""}<br><br></p>
-        <p>Shipping Option: ${selectedShipping ? selectedShipping.textContent : "{Shipping Option}"}</p>
-        <p>Payment Option: ${selectedPayment ? selectedPayment.textContent : "{Payment Option}"}</p>
+        <p>Shipping Option: <br><br>${selectedShipping ? selectedShipping.textContent : "{Shipping Option}"}</p>
+        <p>Payment Option: <br><br>${selectedPayment ? selectedPayment.textContent : "{Payment Option}"}</p>
       `;
     }
   
