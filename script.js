@@ -87,6 +87,9 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
     const addressInput = document.getElementById("address");
     const addressLine2Input = document.getElementById("addressline2");
     const ordernumber = document.getElementById("ordnum");
+    const phone = document.getElementById("phone");
+    const city = document.getElementById("city");
+    const country = document.getElementById("country");
     // Options
     const shippingOptions = document.querySelectorAll(".shoption");
     const paymentOptions = document.querySelectorAll(".paoption");
@@ -95,7 +98,7 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
     const orderReview = document.getElementById("order-review");
   
     // Add event listener for input changes
-    [nameInput, emailInput, addressInput, addressLine2Input].forEach(input => {
+    [nameInput, emailInput, addressInput, addressLine2Input, phone, city, country].forEach(input => {
       input.addEventListener("input", updateOrderReview);
     });
   
@@ -123,12 +126,14 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
       orderReview.innerHTML = `
         <p>${ordernumber.textContent}</p>
         <p>Full Name: ${nameInput.value || ""}</p>
-        <p>E-Mail: ${emailInput.value || ""}</p>
         <p>Address: ${addressInput.value || ""}</p>
         <p>${addressLine2Input.value || ""}</p>
-        
-        <p>Shipping Option:<br> ${selectedShipping ? selectedShipping.textContent : "{Shipping Option}"}</p>
-        <p>Payment Option:<br> ${selectedPayment ? selectedPayment.textContent : "{Payment Option}"}</p>
+        <p>${city.value || ""} ${country.value || ""}</p>
+        <p>Contact Info:</p>
+        <p>E-Mail: ${emailInput.value || ""}</p>
+        <p>Phone: ${phone.value || ""}<br><br></p>
+        <p>Shipping Option: ${selectedShipping ? selectedShipping.textContent : "{Shipping Option}"}</p>
+        <p>Payment Option: ${selectedPayment ? selectedPayment.textContent : "{Payment Option}"}</p>
       `;
     }
   

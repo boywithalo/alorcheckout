@@ -58,7 +58,7 @@
 
 @font-face {
     font-family: Agrandir;
-    src: url('fonts/PPAgrandir-Regular.otf') format("opentype");
+    src: url('fonts/PPAgrandir-Regular.ttf') format("truetype");
 }
 
 @font-face {
@@ -86,7 +86,10 @@
     font-family: "OpenSauceSB", sans-serif;
     font-weight: 900
 }
-
+body{
+    background-image: url('bkg.png');
+    background-size: cover;
+}
 .ordnum{
     font-size:24px;
     
@@ -109,11 +112,17 @@ label{
     transform: translateY(-55px);
 }
 .mainside{
-    background-color: #f9f9f9;
-    border-radius:40px;
+    /* background-color: #f9f9f9; */
+    
     width:1100px;
     /* height:125vh; */
-    padding-left:5%
+    padding-left:5%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
     
 }
 .center{
@@ -147,13 +156,19 @@ label{
 }
 
 
-input{
-    border: 1px rgb(78, 78, 78) solid;
+input, .select{
+    border: .5px rgb(78, 78, 78) solid;
     /* background-color: #e9ecef; */
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: rgba(255, 255, 255, 0.25);
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+
     height:55px;
     font-size:17px;
-    border-radius: 20px;
+    border-radius: 25px;
     transition: .2s;
     text-indent: 20px;
     width:415px;
@@ -184,6 +199,12 @@ input:focus{
     padding: 10px 10px; /* Add padding for spacing */
     width: 400px;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.25);
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
 
 }
 .shoption>*{
@@ -214,6 +235,7 @@ input:focus{
 .order-review{
     font-size: 20px;
     font-family: "OSL";
+    line-height: 12px;
 }
 
 .ordr{
@@ -287,9 +309,9 @@ input:focus{
 
 .checkmark{
     width:200px;
-    /* background-color: #ffffff;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 100%; */
+    border-radius: 100%;
     display: flex;
     justify-self: center;
 }
@@ -325,7 +347,7 @@ input:focus{
     /* text-decoration: none; */
     font-family: "OSL";
     font-size: 18px;
-    color:#0D92F4
+    color:#61bdff
 }
 
 .ali{
@@ -333,4 +355,45 @@ input:focus{
     top:50%;
     left:50%;
     transform: translate(-50%, -60%);
+}
+
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.alorpay{
+    background-color: black;
+}
+.alorpay:hover{
+    background-color: rgb(9, 9, 9);
+}
+
+.alorpayicon{
+    width:40px;
+    filter: invert();
+    transform: translateY(2.5px);
+    margin:0px 2px;
+}
+.payct{
+    transform: translateY(-10px);
+    font-family: "Agrandir";
+    display: inline-block;
+    font-size: 22px;
+
+}
+
+.form-control{
+    width:420px;
+    height: 60px;
 }
